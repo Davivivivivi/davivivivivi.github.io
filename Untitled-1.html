@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❤❤ Para Mayra Meu amor ❤❤</title>
+    
+    <!-- Importando a fonte "Roboto" do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Usando a fonte "Roboto" */
+        body {
+            background-color: #000096; /* Fundo alterado para #000096 */
+            color: white;
+            text-align: center;
+            font-family: 'Roboto', sans-serif; /* Fonte "Roboto" aplicada */
+            font-size: 18px; /* Tamanho da fonte aumentado */
+        }
+
+        h1, p {
+            font-size: 24px; /* Aumenta o tamanho das fontes dos parágrafos e título */
+        }
+
+        .container {
+            position: relative;
+            width: 300px;
+            height: 500px;
+            margin: 50px auto;
+            overflow: hidden;
+            border: 4px solid white;
+            border-radius: 10px;
+        }
+
+        .slider {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: transform 1s ease-in-out;
+        }
+
+        .slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .text {
+            margin-top: 20px;
+        }
+
+        hr {
+            width: 80%;
+            border: 1px solid white;
+        }
+
+        .link {
+            color: white;
+            font-size: 20px; /* Tamanho da fonte da link aumentada */
+            text-decoration: underline;
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://open.spotify.com/intl-pt/track/0SfcG65T1KKCj5NQffpzQR?si=9063de03a1614b7f" class="link" target="_blank">
+        Clique aqui
+    </a>
+
+    <div class="container">
+        <div class="slider" id="slider">
+            <img src="https://pbs.twimg.com/media/GmLMm7TWoAAaK8-?format=jpg&name=large" alt="Slide 6">
+            <img src="https://pbs.twimg.com/media/GmLMm76akAAODIx?format=jpg&name=large" alt="Slide 2">
+            <img src="https://pbs.twimg.com/media/GmLMbwCX0AAfqXu?format=jpg&name=small" alt="Slide 3">
+            <img src="https://pbs.twimg.com/media/GmLMbwobYAE5zh6?format=jpg&name=small" alt="Slide 4">
+            <img src="https://pbs.twimg.com/media/GmLMbwvawAAag8-?format=jpg&name=small" alt="Slide 5">
+            <img src="https://pbs.twimg.com/media/GmLMbwqa4AA0Wla?format=jpg&name=small" alt="Slide 1">
+        </div>
+    </div>
+
+    <div class="text">
+        <p>❤ Mayra, Eu te amo!!!</p>
+        <hr>
+        <p>❤ A cada dia que passa, meu coração se enche mais de carinho e admiração por você. <br>
+            Cada sorriso seu ilumina meu mundo. Tudo ao seu lado se torna mais bonito e significativo. <br>
+            Eu te amo pra sempre ❤</p>
+    </div>
+
+    <script>
+        const images = [
+            "https://pbs.twimg.com/media/GmLMm7TWoAAaK8-?format=jpg&name=small",
+            "https://pbs.twimg.com/media/GmLMm76akAAODIx?format=jpg&name=small",
+            "https://pbs.twimg.com/media/GmLMbwCX0AAfqXu?format=jpg&name=small",
+            "https://pbs.twimg.com/media/GmLMbwobYAE5zh6?format=jpg&name=small",
+            "https://pbs.twimg.com/media/GmLMbwvawAAag8-?format=jpg&name=small",
+            "https://pbs.twimg.com/media/GmLMbwqa4AA0Wla?format=jpg&name=small"
+            
+        ];
+
+        let index = 0;
+        const slider = document.getElementById("slider");
+
+        function changeImage() {
+            index = (index + 1) % images.length;
+            slider.style.transform = `translateX(-${index * 100}%)`; // Desliza a imagem
+        }
+
+        setInterval(changeImage, 3000); // A cada 3 segundos, troca a imagem
+    </script>
+</body>
+</html>
